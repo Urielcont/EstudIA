@@ -1,0 +1,138 @@
+* { 
+
+    margin: 0; 
+
+    padding: 0; 
+
+} 
+
+ 
+
+.drawer { 
+
+    position: absolute; 
+
+    top: 0; 
+
+    width: 10vmax; 
+
+    height: 7vmax; 
+
+
+    border-radius: 0px 0px 20px 0px; 
+
+} 
+
+ 
+
+.Menu_icon { 
+    position: relative;
+    top: -5vmin;
+} 
+
+
+.container { 
+
+    display: flex; 
+
+    flex-wrap: wrap; 
+
+    justify-content: center; 
+
+    gap: 20px; 
+
+    padding: 20px; 
+
+} 
+
+ 
+
+.subject { 
+
+    flex: 1 1 calc(50% - 40px); /* Two columns with gap */ 
+
+    max-width: 444px; 
+
+    height: 139px; 
+
+    background: #E9E9E9; 
+
+    border-radius: 19px; 
+
+    display: flex; 
+
+    align-items: center; 
+
+    justify-content: center; 
+
+    text-align: center; 
+
+} 
+
+ 
+
+.subject a { 
+
+    width: 100%; 
+
+    height: 100%; 
+
+    display: flex; 
+
+    align-items: center; 
+
+    justify-content: center; 
+
+    text-decoration: none; 
+
+    color: black; 
+
+} 
+
+ 
+
+@media (max-width: 768px) { 
+
+    .subject { 
+
+        height: 100px; 
+
+        flex: 1 1 100%; /* One column */ 
+
+    } 
+
+} 
+
+ 
+
+@media (max-width: 480px) { 
+
+    .drawer { 
+
+        width: 20vmax; 
+
+        height: 10vmax; 
+
+    } 
+
+ 
+
+    .subject { 
+
+        height: 80px; 
+
+    } 
+
+} 
+:root {
+    --button-color: #f0f0f0;
+    --background-color: #e0e0e0;
+}
+
+.container {
+    background-color: var(--background-color);
+}
+
+.subject {
+    background-color: var(--button-color);
+}
