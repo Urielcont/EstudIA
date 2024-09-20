@@ -33,7 +33,7 @@ const StatisticsCard = () => {
         <>
             <Card sx={{
                 borderRadius: 5,
-                width: "300px", // Ajusta el ancho según sea necesario
+                width: "600px", // Ajusta el ancho según sea necesario
                 height: "400px", // Ajusta la altura según sea necesario
                 position: 'relative',
                 display: 'flex',
@@ -58,7 +58,7 @@ const StatisticsCard = () => {
                         Aciertos en Materias
                     </Typography>
                 
-                    <Box sx={{ height: 300, width: '100%' }}>
+                    <Box sx={{ height: "180px", width: '100%' }}>
                         <ResponsiveBar
                             data={data}
                             keys={['aciertos']}
