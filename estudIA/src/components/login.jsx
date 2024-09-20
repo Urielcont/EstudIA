@@ -1,16 +1,14 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import { Card, CardContent, Typography, Box } from '@mui/material';
-import { AttachMoneyOutlined } from '@mui/icons-material';
-import { useDispatch, useSelector } from 'react-redux';
-import Grid from '@mui/system/Unstable_Grid/Grid';
+// import Grid from '@mui/system/Unstable_Grid/Grid';
 
 const login= () => {
     <Card
     sx={{
         borderRadius: 2,
         boxShadow: 3,
-        backgroundColor: theme.palette.background.default,
-        color: theme.palette.neutral.main,
+        // backgroundColor: theme.palette.background.default,
+        // color: theme.palette.neutral.main,
         maxWidth: '100%',
         mb: 2,
         height: 175,   
@@ -42,12 +40,12 @@ const login= () => {
                     mr: 1.5,
                 }}
             >
-                <AttachMoneyOutlined
+                {/* <AttachMoneyOutlined
                     sx={{
                         width: '1.5rem',
                         color: '#ffffff',
                     }}
-                />
+                /> */}
             </Box>
             <Typography variant="h6"  className="card-value" >
                 Ganancias
