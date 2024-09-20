@@ -3,3 +3,66 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fondo {
+    background-color: aqua;
+    width: 80%;
+    height: 80vh;
+    top: 20vh;
+    left: 9vmin;
+    position: absolute;
+    border-radius: 5vmax 5vmax 5vmax 5vmax;
+    z-index: 0;
+    text-align: center;
+    align-content: center;
+}
+
+.imagen {
+    border-radius: 100%;
+    background-color: blue;
+    width: 25vmax;
+    height: 25vmax;
+    z-index: 1;
+    position: absolute;
+    top: 8vmax;
+    left: 24vmax;
+}
+
+.content {
+    color: black;
+    margin-top: 15vmax;
+}
+
+label {
+    margin: 10vmin;
+}
+
+@media screen and (max-width: 768px) {
+    .fondo {
+        width: 90%;
+        height: 90vh;
+        top: 5vh;
+        left: 5vmin;
+    }
+
+    .imagen {
+        width: 30vmax;
+        height: 30vmax;
+        top: 12vmax;
+        left: 20vmax;
+    }
+
+    .content {
+        margin-top: 50vmax;
+    }
+
+    label {
+        margin: 5vmin;
+    }
+}
