@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Card, CardContent, IconButton, Typography, Modal, Box } from "@mui/material";
+import { Card, CardContent, IconButton, Typography } from "@mui/material";
 import Add from "@mui/icons-material/Add";
+import RegisterChildModal from './modalRegisterChildren'; // Asegúrate de importar el modal
 
 const RegistredChildren = () => {
     const [open, setOpen] = useState(false);
@@ -21,7 +22,7 @@ const RegistredChildren = () => {
                 height: "200px",
                 position: 'relative', // Para posicionar el ícono
                 display: 'flex', // Para usar flexbox
-                flexDirection: 'column', // Direccion de los elementos
+                flexDirection: 'column', // Dirección de los elementos
                 justifyContent: 'center', // Centrar verticalmente
                 alignItems: 'center', // Centrar horizontalmente
                 textAlign: 'center', // Alinear el texto al centro
@@ -47,33 +48,8 @@ const RegistredChildren = () => {
                 </CardContent>
             </Card>
 
-            <Modal
-                open={open}
-                onClose={handleCloseModal}
-                aria-labelledby="modal-title"
-                aria-describedby="modal-description"
-            >
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)',
-                        bgcolor: 'background.paper',
-                        boxShadow: 24,
-                        p: 4,
-                        borderRadius: 2,
-                    }}
-                >
-                    <Typography id="modal-title" variant="h6" component="h2">
-                        Registro de Estudio
-                    </Typography>
-                    <Typography id="modal-description" sx={{ mt: 2 }}>
-                        Aquí puedes agregar información adicional sobre el tiempo de estudio.
-                    </Typography>
-                    {/* Aquí puedes agregar más contenido y formularios para tu modal */}
-                </Box>
-            </Modal>
+            {/* Aquí renderizas el modal */}
+            <RegisterChildModal open={open} handleClose={handleCloseModal} />
         </>
     );
 };
