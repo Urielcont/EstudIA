@@ -49,7 +49,7 @@ const RegistredChildren = () => {
             </Card>
 
             {/* Aquí renderizas el modal */}
-            <RegisterChildModal open={open} handleClose={handleCloseModal} />
+            <RegisterChildModal  open={open} handleClose={handleCloseModal} />
         </>
     );
 };
