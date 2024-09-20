@@ -10,7 +10,6 @@ import {
   Tab,
   Card,
   Grid2,
-  
 } from '@mui/material';
 
 function TabPanel(props) {
@@ -44,7 +43,7 @@ const Login = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();  
+    event.preventDefault();
     navigate('/profiles');
   };
 
@@ -55,8 +54,8 @@ const Login = () => {
       justifyContent="center"
       alignItems="center"
       sx={{
-        minHeight: '100vh', // Para asegurar que ocupe el 100% de la altura
-        bgcolor: '#f5f5f5', // Fondo claro para diferenciar el contenido
+        minHeight: '100vh',
+        bgcolor: '#f5f5f5',
       }}
     >
       <Grid2 item xs={12} sm={8} md={6} lg={2}>
@@ -146,10 +145,10 @@ const Login = () => {
                 margin="normal"
                 required
                 fullWidth
-                id="register-email"
-                label="Correo Electrónico"
-                name="email"
-                autoComplete="email"
+                id="username"
+                label="Usuario"
+                name="username"
+                autoComplete="username"
                 autoFocus
                 size="small"
                 sx={{ bgcolor: '#ffffff', borderRadius: 1 }}
@@ -158,7 +157,51 @@ const Login = () => {
                 margin="normal"
                 required
                 fullWidth
-                name="password"
+                id="first-name"
+                label="Nombre"
+                name="first-name"
+                autoComplete="given-name"
+                size="small"
+                sx={{ bgcolor: '#ffffff', borderRadius: 1 }}
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="last-name"
+                label="Apellido Paterno"
+                name="last-name"
+                autoComplete="family-name"
+                size="small"
+                sx={{ bgcolor: '#ffffff', borderRadius: 1 }}
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="maternal-last-name"
+                label="Apellido Materno"
+                name="maternal-last-name"
+                autoComplete="family-name"
+                size="small"
+                sx={{ bgcolor: '#ffffff', borderRadius: 1 }}
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="register-email"
+                label="Correo Electrónico"
+                name="email"
+                autoComplete="email"
+                size="small"
+                sx={{ bgcolor: '#ffffff', borderRadius: 1 }}
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="register-password"
                 label="Contraseña"
                 type="password"
                 id="register-password"
