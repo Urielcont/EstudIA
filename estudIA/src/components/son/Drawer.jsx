@@ -32,7 +32,7 @@ export default function Drawern() {
           sx={{ width: 100, height: 100 }}
         />
       </Box>
-      // as
+
       <List>
         {[
           { text: 'Perfil', icon: <PersonIcon />, path: '/perfil' },
