@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography } from "@mui/material";
 
-const WelcomeCard = () => {
+const RegistredChildren = () => {
     return (
         <Card sx={{
             borderRadius: 5,
@@ -15,4 +15,4 @@ const WelcomeCard = () => {
     );
 }
 
-export default WelcomeCard;
+export default RegistredChildren;
