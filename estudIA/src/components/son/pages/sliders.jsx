@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
 const images = [
-  '../assets/img/Sombreros/imagesss-removebg-preview.png',
-  'assets/img/Sombreros/Sombrero.png',
-  // Tu tercera imagen local (ruta relativa)
+  '../',
+  'https://example.com/image2.jpg',
+  'https://example.com/image3.jpg',
 ];
 
 function mascota() {
