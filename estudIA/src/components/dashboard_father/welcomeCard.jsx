@@ -4,21 +4,24 @@ const WelcomeCard = () => {
     return (
         <Card sx={{
             borderRadius: 5,
-            minWidth: "100%"
+            width: "800px",
+            height: "200px"
         }}>
-               <CardContent className="content-card" sx={{ position: 'relative' }}>
-               <Grid2 container spacing={2}>
-                <Typography variant="h3" >
-                   Bienvenido Usuario
-                </Typography>
-                <Typography variant="h4" >
-                 Esta es la informacion de tu hijo/a
-                </Typography>
+            <CardContent className="content-card" sx={{ position: 'relative' }}>
+                <Grid2 container spacing={2} direction="column"> {/* Cambiado a dirección columna */}
+                    <Grid2 item>
+                        <Typography variant="h3">
+                            Bienvenido Usuario
+                        </Typography>
+                    </Grid2>
+                    <Grid2 item>
+                        <Typography variant="h4">
+                            Esta es la información de tu hijo/a
+                        </Typography>
+                    </Grid2>
                 </Grid2>
             </CardContent>
-        
         </Card>
-     
     );
 }
 
