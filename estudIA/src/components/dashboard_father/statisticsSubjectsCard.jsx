@@ -34,7 +34,7 @@ const StatisticsCard = () => {
             <Card sx={{
                 borderRadius: 5,
                 width: "600px", // Ajusta el ancho según sea necesario
-                height: "400px", // Ajusta la altura según sea necesario
+                height: "100%", // Ajusta la altura según sea necesario
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
