@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Grid2, Typography } from "@mui/material";
 
 const WelcomeCard = () => {
     return (
@@ -6,15 +6,19 @@ const WelcomeCard = () => {
             borderRadius: 5,
             minWidth: "100%"
         }}>
-            <CardContent>
+               <CardContent className="content-card" sx={{ position: 'relative' }}>
+               <Grid2 container spacing={2}>
                 <Typography variant="h3" >
                    Bienvenido Usuario
                 </Typography>
                 <Typography variant="h4" >
                  Esta es la informacion de tu hijo/a
                 </Typography>
+                </Grid2>
             </CardContent>
+        
         </Card>
+     
     );
 }
 

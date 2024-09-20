@@ -8,8 +8,9 @@ import {
   Button,
   Tabs,
   Tab,
-  Paper,
-  Container,
+  Card,
+  Grid2,
+  
 } from '@mui/material';
 
 function TabPanel(props) {
@@ -36,7 +37,7 @@ TabPanel.propTypes = {
 
 const Login = () => {
   const [value, setValue] = useState(0);
-  const navigate = useNavigate(); // Hook para la navegación
+  const navigate = useNavigate();
 
   const handleChange = (_event, newValue) => {
     setValue(newValue);
@@ -48,34 +49,22 @@ const Login = () => {
   };
 
   return (
-    <Container
-      component="main"
-      maxWidth="xs"
+    <Grid2 
+      container
+      spacing={0}
+      justifyContent="center"
+      alignItems="center"
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh',
-        width: '100%',
-        bgcolor: '#ffffff',
+        minHeight: '100vh', // Para asegurar que ocupe el 100% de la altura
+        bgcolor: '#f5f5f5', // Fondo claro para diferenciar el contenido
       }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <Paper
-          elevation={3}
+      <Grid2 item xs={12} sm={8} md={6} lg={4}>
+        <Card
           sx={{
-            width: '100%',
-            mt: 3,
+            p: 4,
             bgcolor: '#7FAFC9',
             color: '#ffffff',
-            padding: 2,
           }}
         >
           <Tabs
@@ -103,14 +92,14 @@ const Login = () => {
               component="h1"
               variant="h4"
               gutterBottom
-              sx={{ color: '#ffffff' }}
+              sx={{ color: '#ffffff', textAlign: 'center' }}
             >
               Bienvenidos a EstudIA
             </Typography>
             <Typography
               component="span"
               gutterBottom
-              sx={{ color: '#ffffff' }}
+              sx={{ color: '#ffffff', textAlign: 'center', display: 'block' }}
             >
               EstudIA es una aplicación que fomenta el estudio a nivel de educación primaria
             </Typography>
@@ -125,6 +114,7 @@ const Login = () => {
                 autoComplete="email"
                 autoFocus
                 size="small"
+                sx={{ bgcolor: '#ffffff', borderRadius: 1 }}
               />
               <TextField
                 margin="normal"
@@ -136,6 +126,7 @@ const Login = () => {
                 id="password"
                 autoComplete="current-password"
                 size="small"
+                sx={{ bgcolor: '#ffffff', borderRadius: 1 }}
               />
               <Button
                 type="submit"
@@ -159,6 +150,7 @@ const Login = () => {
                 autoComplete="email"
                 autoFocus
                 size="small"
+                sx={{ bgcolor: '#ffffff', borderRadius: 1 }}
               />
               <TextField
                 margin="normal"
@@ -170,6 +162,7 @@ const Login = () => {
                 id="register-password"
                 autoComplete="new-password"
                 size="small"
+                sx={{ bgcolor: '#ffffff', borderRadius: 1 }}
               />
               <Button
                 type="submit"
@@ -181,10 +174,10 @@ const Login = () => {
               </Button>
             </Box>
           </TabPanel>
-        </Paper>
-      </Box>
-    </Container>
+        </Card>
+      </Grid2>
+    </Grid2>
   );
-}
+};
 
 export default Login;
