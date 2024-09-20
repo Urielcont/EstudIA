@@ -1,6 +1,6 @@
-//Archivo para simplificar y dejar mas limpio el codigo
+require("dotenv").config();
 
-//Puerto del servidor
-export const {
-    PORT = 3000
-} = process.env
+module.exports = {
+    PORT: process.env.PORT || 3000,
+    JWT_SECRET: process.env.JWT_SECRET || "estudIA_jwt"
+};
