@@ -23,44 +23,32 @@ const Dashboard = () => {
         >
             <Bar />
             <Grid2
-            container
-            spacing={4}>
-                
-            <Grid2
                 container
                 spacing={4}
                 sx={{
-                    flexGrow: 1, // Permite que el Grid2 crezca para llenar el espacio restante
+                    flexGrow: 1, // Permite que el Grid crezca para llenar el espacio restante
+                    mt: 7,
                 }}
             >
-                <Grid2 item xs={12} md={6}  lg={4}sx={{ display: 'flex', alignItems: 'stretch', mt: 7 }}>
+                {/* WelcomeCard */}
+                <Grid2 item xs={12} md={6} lg={3} sx={{ display: 'flex', alignItems: 'stretch' }}>
                     <WelcomeCard />
                 </Grid2>
-                <Grid2 item xs={12} md={6}  lg={2}sx={{ display: 'flex', alignItems: 'stretch', mt: 7 }}>
+                
+                {/* RegisteredChildren */}
+                <Grid2 item xs={12} md={6} lg={3} sx={{ display: 'flex', alignItems: 'stretch' }}>
                     <RegisteredChildren />
                 </Grid2>
-                <Grid2 item xs={12} md={6} lg={2} sx={{ display: 'flex', alignItems: 'stretch', mt: 7 }}>
+
+                {/* HoursStudied */}
+                <Grid2 item xs={12} md={6} lg={3} sx={{ display: 'flex', alignItems: 'stretch' }}>
                     <HoursStudied />
                 </Grid2>
-                <Grid2 item xs={12} md={6} lg={4} sx={{ display: 'flex', alignItems: 'stretch', mt: 7 }}>
+
+                {/* StatisticsCard */}
+                <Grid2 item xs={12} md={6} lg={3} sx={{ display: 'flex', alignItems: 'stretch' }}>
                     <StatisticsCard />
                 </Grid2>
-            </Grid2>
-            <Grid2
-                container
-                spacing={4}
-                sx={{
-                    flexGrow: 1, // Permite que el Grid2 crezca para llenar el espacio restante
-                }}
-            >
-              
-                <Grid2 item xs={12} md={6} sx={{ display: 'flex', alignItems: 'stretch', mt: 7 }}>
-                    <RegisteredChildren />
-                </Grid2>
-                <Grid2 item xs={12} md={6} sx={{ display: 'flex', alignItems: 'stretch', mt: 7 }}>
-                    <HoursStudied />
-                </Grid2>
-            </Grid2>
             </Grid2>
         </Box>
     );
