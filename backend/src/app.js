@@ -1,8 +1,12 @@
-import express from 'express'
-import { PORT } from '../src/config.js'
+const express = require("express");
+const { PORT } = require('./config.js')
+// const cors = require("cors");
+const rutas = require("./routes/rutas.js");
 
 //servidor de express
 const app = express()
+
+app.use('/api', rutas);
 
 app.get('/', (req, res) => {
     res.send('Puerto')
