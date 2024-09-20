@@ -11,8 +11,8 @@ function navigation() {
         <Route path="/" element={<Login />} />
         <Route path="/dash" element={<Dash />} />
         <Route path="/profiles" element={<Profiles />} />
-
         <Route path="/hijo" element={<Son />} />
+      
       </Routes>
     </Router>
   );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent, IconButton, Typography } from "@mui/material";
 import Add from "@mui/icons-material/Add";
-import RegisterChildModal from './RegisterChildModal'; // Asegúrate de importar el modal
+import RegisterChildModal from './modalRegisterChildren'; // Asegúrate de importar el modal
 
 const RegistredChildren = () => {
     const [open, setOpen] = useState(false);
