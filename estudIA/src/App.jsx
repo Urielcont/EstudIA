@@ -10,7 +10,7 @@ function App() {
   };
 
   return (
-    <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#7FAFC9' }}>
+    <body style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#7FAFC9' }}>
       {!user ? (
         <LoginForm onLogin={handleLogin} />
       ) : (
@@ -19,7 +19,7 @@ function App() {
           <button onClick={() => setUser(null)}>Cerrar Sesión</button>
         </div>
       )}
-    </div>
+    </body>
   );
 }
 

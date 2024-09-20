@@ -44,7 +44,7 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();  
-    navigate('/dash');
+    navigate('/profiles');
   };
 
   return (
