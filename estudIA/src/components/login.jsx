@@ -59,12 +59,14 @@ const Login = () => {
         bgcolor: '#f5f5f5', // Fondo claro para diferenciar el contenido
       }}
     >
-      <Grid2 item xs={12} sm={8} md={6} lg={4}>
+      <Grid2 item xs={12} sm={8} md={6} lg={2}>
         <Card
           sx={{
             p: 4,
             bgcolor: '#7FAFC9',
             color: '#ffffff',
+            maxWidth: '30rem',
+            margin: '0 auto',
           }}
         >
           <Tabs
