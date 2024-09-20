@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   Box,
@@ -9,8 +10,6 @@ import {
   Tab,
   Paper,
   Container,
-  Snackbar,
-  Alert,
 } from '@mui/material';
 
 function TabPanel(props) {
@@ -35,32 +34,17 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function LoginForm({ onLogin }) {
+const Login = () => {
   const [value, setValue] = useState(0);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [openSnackbar, setOpenSnackbar] = useState(false);
-  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const navigate = useNavigate(); // Hook para la navegación
 
   const handleChange = (_event, newValue) => {
     setValue(newValue);
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    if (email && password) {
-      const message = value === 0 ? 'Inicio de sesión exitoso' : 'Registro exitoso';
-      setSnackbarMessage(message);
-      onLogin({ email, password });
-    } else {
-      setSnackbarMessage('Por favor, complete todos los campos');
-    }
-    setOpenSnackbar(true);
-  };
-
-  const handleCloseSnackbar = (event, reason) => {
-    if (reason === 'clickaway') return;
-    setOpenSnackbar(false);
+    event.preventDefault();  
+    navigate('/dash');
   };
 
   return (
@@ -73,8 +57,8 @@ export default function LoginForm({ onLogin }) {
         alignItems: 'center',
         justifyContent: 'center',
         height: '100vh',
-        width:'100%',
-        bgcolor: '#ffffff', // Fondo blanco
+        width: '100%',
+        bgcolor: '#ffffff',
       }}
     >
       <Box
@@ -89,9 +73,9 @@ export default function LoginForm({ onLogin }) {
           sx={{
             width: '100%',
             mt: 3,
-            bgcolor: '#7FAFC9', // Color de fondo del contenedor
-            color: '#ffffff', // Letras blancas dentro del contenedor
-            padding: 2, // Añade algo de padding para espaciar mejor el contenido
+            bgcolor: '#7FAFC9',
+            color: '#ffffff',
+            padding: 2,
           }}
         >
           <Tabs
@@ -101,13 +85,13 @@ export default function LoginForm({ onLogin }) {
             variant="fullWidth"
             sx={{
               '.MuiTab-root': {
-                color: '#ffffff', // Cambiar el color del texto de las tabs a blanco
+                color: '#ffffff',
               },
               '.Mui-selected': {
-                color: '#ffffff', // Asegura que la tab seleccionada también sea blanca
+                color: '#ffffff',
               },
               '.MuiTabs-indicator': {
-                backgroundColor: '#ffffff', // Indicador de selección blanco
+                backgroundColor: '#ffffff',
               },
             }}
           >
@@ -115,21 +99,21 @@ export default function LoginForm({ onLogin }) {
             <Tab label="Registrarse" />
           </Tabs>
           <TabPanel value={value} index={0}>
-          <Typography
-          component="h1"
-          variant="h4"
-          gutterBottom
-          sx={{ color: '#ffffff' }} // Letras blancas
-        >
-          Bienvenidos a EstudIA
-        </Typography>
-        <Typography
-          component="span"
-          gutterBottom
-          sx={{ color: '#ffffff' }} // Letras blancas
-        >
-          Estudia es una aplicacion que fomenta el estudio a nivel de educacion primaria 
-        </Typography>
+            <Typography
+              component="h1"
+              variant="h4"
+              gutterBottom
+              sx={{ color: '#ffffff' }}
+            >
+              Bienvenidos a EstudIA
+            </Typography>
+            <Typography
+              component="span"
+              gutterBottom
+              sx={{ color: '#ffffff' }}
+            >
+              EstudIA es una aplicación que fomenta el estudio a nivel de educación primaria
+            </Typography>
             <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
@@ -140,13 +124,7 @@ export default function LoginForm({ onLogin }) {
                 name="email"
                 autoComplete="email"
                 autoFocus
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                InputLabelProps={{ style: { color: '#ffffff' } }} 
-                InputProps={{
-                  style: { color: '#ffffff' },
-                }}
-                size="small" // Reduce la altura del input
+                size="small"
               />
               <TextField
                 margin="normal"
@@ -157,19 +135,13 @@ export default function LoginForm({ onLogin }) {
                 type="password"
                 id="password"
                 autoComplete="current-password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                InputLabelProps={{ style: { color: '#ffffff' } }} 
-                InputProps={{
-                  style: { color: '#ffffff' },
-                }}
-                size="small" // Reduce la altura del input
+                size="small"
               />
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2, bgcolor: '#ffffff', color: '#7FAFC9' }} // Botón con texto azul y fondo blanco
+                sx={{ mt: 3, mb: 2, bgcolor: '#ffffff', color: '#7FAFC9' }}
               >
                 Iniciar Sesión
               </Button>
@@ -186,13 +158,7 @@ export default function LoginForm({ onLogin }) {
                 name="email"
                 autoComplete="email"
                 autoFocus
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                InputLabelProps={{ style: { color: '#ffffff' } }} // Color de la etiqueta
-                InputProps={{
-                  style: { color: '#ffffff' }, // Color del texto
-                }}
-                size="small" // Reduce la altura del input
+                size="small"
               />
               <TextField
                 margin="normal"
@@ -203,19 +169,13 @@ export default function LoginForm({ onLogin }) {
                 type="password"
                 id="register-password"
                 autoComplete="new-password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                InputLabelProps={{ style: { color: '#ffffff' } }} // Color de la etiqueta
-                InputProps={{
-                  style: { color: '#ffffff' }, // Color del texto
-                }}
-                size="small" // Reduce la altura del input
+                size="small"
               />
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2, bgcolor: '#ffffff', color: '#7FAFC9' }} // Botón con texto azul y fondo blanco
+                sx={{ mt: 3, mb: 2, bgcolor: '#ffffff', color: '#7FAFC9' }}
               >
                 Registrarse
               </Button>
@@ -223,11 +183,8 @@ export default function LoginForm({ onLogin }) {
           </TabPanel>
         </Paper>
       </Box>
-      <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleCloseSnackbar}>
-        <Alert onClose={handleCloseSnackbar} severity="info" sx={{ width: '100%' }}>
-          {snackbarMessage}
-        </Alert>
-      </Snackbar>
     </Container>
   );
 }
+
+export default Login;

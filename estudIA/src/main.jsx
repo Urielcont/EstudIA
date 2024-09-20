@@ -1,10 +1,12 @@
+// index.jsx
+//hhhh
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import Login from './components/login'; // Asegúrate de tener el componente Login
+import Navigation from './components/navigation'; 
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Login />
+    <Navigation />
   </StrictMode>
 );
