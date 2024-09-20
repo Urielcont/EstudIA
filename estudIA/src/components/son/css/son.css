@@ -26,8 +26,8 @@
  
 
 .Menu_icon { 
-    position: relative;
-    top: -5vmin;
+    position: sticky;
+    top: -4vmin;
 } 
 
 
@@ -55,7 +55,6 @@
 
     height: 139px; 
 
-    background: #E9E9E9; 
 
     border-radius: 19px; 
 
@@ -124,15 +123,3 @@
     } 
 
 } 
-:root {
-    --button-color: #f0f0f0;
-    --background-color: #e0e0e0;
-}
-
-.container {
-    background-color: var(--background-color);
-}
-
-.subject {
-    background-color: var(--button-color);
-}

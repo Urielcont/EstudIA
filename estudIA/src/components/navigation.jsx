@@ -3,6 +3,7 @@ import Login from './login';
 import Dash from '../components/dashboard_father/dash'; // Asegúrate de importar el componente Dash
 import Profiles from '../components/profiles/profiles'; // Asegúrate de importar el componente Dash
 import Son from './son/pages/son';
+import Perfilson from './son/pages/perfil';
 
 function navigation() {
   return (
@@ -11,6 +12,7 @@ function navigation() {
         <Route path="/" element={<Login />} />
         <Route path="/dash" element={<Dash />} />
         <Route path="/profiles" element={<Profiles />} />
+        <Route path="/perfilHijo" element={<Perfilson />} />
 
         <Route path="/hijo" element={<Son />} />
       </Routes>
